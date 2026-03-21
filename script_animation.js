@@ -25,7 +25,7 @@
             if (this.x > canvas.width || this.x <0){
                 this.vx = -this.vx;
             }
-            if (this.y > canvas.width || this.y <0){
+            if (this.y > canvas.height || this.y < 0){
                 this.vy = -this.vy;
             }
             this.x += this.vx;
