@@ -172,9 +172,10 @@
         "Last updated March 2026. Source: <a href=\"https://github.com/NoSoyRo/nosoyro.github.io\">nosoyro.github.io</a>",
       badgeFork: "fork",
       typed0: "Senior data engineer and Databricks developer.",
-      typed1: "MSc student in computer science (UNAM / IIMAS).",
-      typed2: "Faculty lecturer in algorithms and data mining.",
-      typed3: "Physicist and mathematician who builds software."
+      typed1: "Senior software engineer.",
+      typed2: "MSc student in computer science (UNAM / IIMAS).",
+      typed3: "Faculty lecturer in algorithms and data mining.",
+      typed4: "Physicist and mathematician who builds software."
     },
     es: {
       metaTitle: "José Rodrigo Moreno López — CV",
@@ -345,9 +346,10 @@
         "Actualizado en marzo de 2026. Código: <a href=\"https://github.com/NoSoyRo/nosoyro.github.io\">nosoyro.github.io</a>",
       badgeFork: "fork",
       typed0: "Ingeniero de datos senior y desarrollador Databricks.",
-      typed1: "Estudiante de maestría en computación (UNAM / IIMAS).",
-      typed2: "Profesor de algoritmos y minería de datos.",
-      typed3: "Físico y matemático que construye software."
+      typed1: "Ingeniero de software senior.",
+      typed2: "Estudiante de maestría en computación (UNAM / IIMAS).",
+      typed3: "Profesor de algoritmos y minería de datos.",
+      typed4: "Físico y matemático que construye software."
     }
   };
 
@@ -375,7 +377,7 @@
     }
     var T = STRINGS[lang];
     typedInstance = new Typed(".mov", {
-      strings: [T.typed0, T.typed1, T.typed2, T.typed3],
+      strings: [T.typed0, T.typed1, T.typed2, T.typed3, T.typed4],
       typeSpeed: 42,
       backSpeed: 28,
       backDelay: 1400,
