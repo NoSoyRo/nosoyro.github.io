@@ -634,9 +634,11 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   display: block;
 }
 
-/* Maureen — pre-cropped portrait, face centred */
+/* Maureen — face centred, origin validated via pixel simulation */
 .team-avatar-photo--mau img {
-  object-position: center 55%;
+  object-position: center 50%;
+  transform: scale(2);
+  transform-origin: 50% 30%;
 }
 
 .team-avatar-svg svg {
