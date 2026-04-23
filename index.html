@@ -382,10 +382,13 @@
       </div>
 
       <form class="pi-form" id="pi-contact-form"
-            action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+            action="https://api.web3forms.com/submit"
             method="POST">
-        <input type="hidden" name="_subject" value="Pi Solutions — new message">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <!-- Web3Forms: get your free key at web3forms.com → enter rodri.mo@ciencias.unam.mx -->
+        <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
+        <input type="hidden" name="subject" value="Pi Solutions — new message">
+        <input type="hidden" name="from_name" value="Pi Solutions Site">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
         <label for="cf-name">Name</label>
         <input type="text"  id="cf-name"    name="name"    placeholder="Your name" required>
         <label for="cf-email">Email</label>
