@@ -79,22 +79,21 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 }
 
 .intro-rule {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   width: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
   transition: width 0.75s var(--ease);
   will-change: width;
+  flex-shrink: 0;
 }
-.intro-rule.is-drawn { width: min(500px, 78vw); }
+.intro-rule.is-drawn { width: min(480px, 72vw); }
 
 .intro-wordmark {
   display: flex;
   align-items: baseline;
   gap: 0.2em;
+  margin-top: 0.6rem;
   font-family: var(--sans);
   font-size: clamp(2.6rem, 7.5vw, 5.8rem);
   font-weight: 300;
@@ -637,7 +636,9 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* Zoom into Maureen's face — portrait photo, face is upper-centre */
 .team-avatar-photo--mau img {
-  object-position: center 8%;
+  object-position: center 18%;
+  transform: scale(2.2);
+  transform-origin: 50% 30%;
 }
 
 .team-avatar-svg svg {
