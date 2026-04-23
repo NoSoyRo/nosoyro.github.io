@@ -637,6 +637,13 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   display: block;
 }
 
+/* Zoom in on Maureen's face — photo is full-body, face is upper-centre */
+.team-avatar-photo--mau img {
+  object-position: center 12%;
+  transform: scale(1.55);
+  transform-origin: center 20%;
+}
+
 .team-role-badge {
   position: absolute;
   bottom: 4px;
