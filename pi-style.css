@@ -634,10 +634,10 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   display: block;
 }
 
-/* Maureen — face centred, origin validated via pixel simulation */
+/* Maureen — scale 1.6 shows full face + hair, pixel-validated */
 .team-avatar-photo--mau img {
   object-position: center 50%;
-  transform: scale(2);
+  transform: scale(1.6);
   transform-origin: 50% 30%;
 }
 
