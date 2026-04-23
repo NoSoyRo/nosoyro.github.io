@@ -634,11 +634,9 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   display: block;
 }
 
-/* Zoom into Maureen's face — portrait photo, face is upper-centre */
+/* Maureen — pre-cropped portrait, centre-top crop */
 .team-avatar-photo--mau img {
-  object-position: center 18%;
-  transform: scale(2.2);
-  transform-origin: 50% 30%;
+  object-position: center 15%;
 }
 
 .team-avatar-svg svg {
