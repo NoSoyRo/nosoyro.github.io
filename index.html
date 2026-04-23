@@ -375,11 +375,26 @@
         we want to hear about it.
       </p>
       <div class="pi-contact-links">
-        <a href="mailto:rodri.mo@ciencias.unam.mx">rodri.mo@ciencias.unam.mx</a>
-        <a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233">LinkedIn</a>
-        <a href="https://github.com/NoSoyRo/PI-SOLUTIONS">GitHub · PI-SOLUTIONS</a>
+        <a class="email-shield" href="#contact" data-u="rodri.mo" data-d="ciencias.unam.mx">Email</a>
+        <a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/NoSoyRo" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="cv.html">Full CV</a>
       </div>
+
+      <form class="pi-form" id="pi-contact-form"
+            action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+            method="POST">
+        <input type="hidden" name="_subject" value="Pi Solutions — new message">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <label for="cf-name">Name</label>
+        <input type="text"  id="cf-name"    name="name"    placeholder="Your name" required>
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email"   name="email"   placeholder="your@email.com" required>
+        <label for="cf-msg">Message</label>
+        <textarea           id="cf-msg"     name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+        <button type="submit">Send message</button>
+        <p class="pi-form-success" id="pi-form-ok">Message sent — we'll be in touch.</p>
+      </form>
     </section>
 
     <!-- ═══ FOOTER ═══ -->
@@ -406,6 +421,45 @@
   </script>
   <script src="pi-canvas.js"></script>
   <script src="pi-intro.js"></script>
+  <script>
+    /* Email shield — assembles address only on interaction, never in plain HTML */
+    document.querySelectorAll('.email-shield').forEach(function(a) {
+      function arm() {
+        a.href = 'mailto:' + a.dataset.u + String.fromCharCode(64) + a.dataset.d;
+      }
+      a.addEventListener('mouseenter', arm);
+      a.addEventListener('focus',      arm);
+      a.addEventListener('touchstart', arm, { passive: true });
+    });
+
+    /* Formspree AJAX submit — keeps user on page */
+    var form = document.getElementById('pi-contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        }).then(function(r) {
+          if (r.ok) {
+            form.reset();
+            document.getElementById('pi-form-ok').style.display = 'block';
+            btn.style.display = 'none';
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Try again';
+          }
+        }).catch(function() {
+          btn.disabled = false;
+          btn.textContent = 'Try again';
+        });
+      });
+    }
+  </script>
   <script>
     /* Scroll reveal for .pi-reveal elements */
     (function(){

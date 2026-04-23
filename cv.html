@@ -41,9 +41,9 @@
       <p class="tagline"><span class="mov" aria-live="polite"></span></p>
       <div class="contact-line">
         <span data-i18n="heroMexico">Mexico</span>
-        <span><a href="mailto:rodri.mo@ciencias.unam.mx">rodri.mo@ciencias.unam.mx</a></span>
-        <span><a href="https://github.com/NoSoyRo">GitHub</a></span>
-        <span><a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233">LinkedIn</a></span>
+        <span><a class="email-shield" href="#contact" data-u="rodri.mo" data-d="ciencias.unam.mx">Email</a></span>
+        <span><a href="https://github.com/NoSoyRo" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        <span><a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
       </div>
     </header>
 
@@ -272,18 +272,26 @@
       <section id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading" data-i18n="contactHeading">Contact</h2>
         <div class="contact-block">
-          <p><a href="mailto:rodri.mo@ciencias.unam.mx">rodri.mo@ciencias.unam.mx</a></p>
-          <p><a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233">LinkedIn</a> · <a href="https://github.com/NoSoyRo">GitHub</a></p>
+          <p><a class="email-shield" href="#contact" data-u="rodri.mo" data-d="ciencias.unam.mx">Email</a></p>
+          <p>
+            <a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            &nbsp;·&nbsp;
+            <a href="https://github.com/NoSoyRo" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </p>
         </div>
-        <form class="cv-form" action="" method="get">
-          <p class="meta" style="margin-top:1rem;" data-i18n-html="formHint">Form is static on GitHub Pages; wire <code>action</code> to your endpoint if needed.</p>
+        <form class="cv-form" id="cv-contact-form"
+              action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+              method="POST">
+          <input type="hidden" name="_subject" value="CV — new message">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <label for="fname" data-i18n="formFirst">First name</label>
           <input type="text" id="fname" name="firstname" autocomplete="given-name" data-i18n-placeholder="phFirst" placeholder="Your name">
           <label for="lname" data-i18n="formLast">Last name</label>
           <input type="text" id="lname" name="lastname" autocomplete="family-name" data-i18n-placeholder="phLast" placeholder="Your last name">
           <label for="subject" data-i18n="formMessage">Message</label>
           <textarea id="subject" name="subject" rows="6" data-i18n-placeholder="phMessage" placeholder="Write something"></textarea>
-          <input type="submit" data-i18n-value="formSubmit" value="Submit">
+          <input type="submit" id="cv-submit" data-i18n-value="formSubmit" value="Submit">
+          <p id="cv-form-ok" style="display:none;margin-top:0.75rem;color:var(--accent);font-family:var(--sans);font-size:0.9rem;">Message sent.</p>
         </form>
       </section>
     </main>
@@ -297,5 +305,42 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="reveal.js"></script>
   <script src="i18n.js"></script>
+  <script>
+    document.querySelectorAll('.email-shield').forEach(function(a) {
+      function arm() {
+        a.href = 'mailto:' + a.dataset.u + String.fromCharCode(64) + a.dataset.d;
+      }
+      a.addEventListener('mouseenter', arm);
+      a.addEventListener('focus',      arm);
+      a.addEventListener('touchstart', arm, { passive: true });
+    });
+
+    var cvForm = document.getElementById('cv-contact-form');
+    if (cvForm) {
+      cvForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = document.getElementById('cv-submit');
+        btn.disabled = true;
+        btn.value = '…';
+        fetch(cvForm.action, {
+          method: 'POST',
+          body: new FormData(cvForm),
+          headers: { Accept: 'application/json' }
+        }).then(function(r) {
+          if (r.ok) {
+            cvForm.reset();
+            document.getElementById('cv-form-ok').style.display = 'block';
+            btn.style.display = 'none';
+          } else {
+            btn.disabled = false;
+            btn.value = 'Try again';
+          }
+        }).catch(function() {
+          btn.disabled = false;
+          btn.value = 'Try again';
+        });
+      });
+    }
+  </script>
 </body>
 </html>
