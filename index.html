@@ -3,298 +3,423 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>José Rodrigo Moreno López — CV</title>
-  <meta name="description" content="Senior data engineer, lecturer, and MSc student. CV and portfolio.">
+  <title>Pi Solutions — We build what matters.</title>
+  <meta name="description" content="Pi Solutions is a Mexican software studio specializing in domain-driven, data-intensive systems, AI agents, and cloud-native architecture.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pi-style.css">
 </head>
 <body>
-  <canvas id="canvas1" aria-hidden="true"></canvas>
-  <div class="cv-wrap">
-    <a class="sr-only" href="#main" id="skip-link">Skip to content</a>
-    <nav class="site-nav" aria-label="Primary">
-      <div class="site-nav-inner">
-        <div class="nav-links">
-          <a href="#profile" data-i18n="navProfile">Profile</a>
-          <a href="#experience" data-i18n="navExperience">Experience</a>
-          <a href="#education" data-i18n="navEducation">Education</a>
-          <a href="#highlights" data-i18n="navHighlights">Highlights</a>
-          <a href="#github">GitHub</a>
-          <a href="#skills" data-i18n="navSkills">Skills</a>
-          <a href="#contact" data-i18n="navContact">Contact</a>
-          <div class="lang-switch" role="group" aria-label="Language">
-            <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="true">EN</button>
-            <button type="button" class="lang-btn" data-set-lang="es" aria-pressed="false">ES</button>
-          </div>
-        </div>
-        <div>
-          <a href="https://github.com/NoSoyRo">github.com/NoSoyRo</a>
-        </div>
+
+  <!-- ═══ INTRO ═══ -->
+  <div id="pi-intro" role="presentation" aria-hidden="true">
+    <div id="intro-rule" class="intro-rule"></div>
+    <div class="intro-wordmark">
+      <span id="intro-pi" class="intro-pi">Pi</span>
+      <span id="intro-solutions" class="intro-solutions">Solutions</span>
+    </div>
+    <p id="intro-tagline" class="intro-tagline">We build what matters</p>
+    <p id="intro-hint" class="intro-hint">scroll to enter</p>
+  </div>
+
+  <!-- ═══ CANVAS ═══ -->
+  <canvas id="pi-canvas" aria-hidden="true"></canvas>
+
+  <div class="pi-wrap">
+
+    <!-- ═══ NAV ═══ -->
+    <nav class="pi-nav" aria-label="Primary">
+      <a href="#" class="pi-logo"><span>Pi</span> Solutions</a>
+      <div class="pi-nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="cv.html" class="nav-cv">CV</a>
       </div>
     </nav>
 
-    <header class="hero">
-      <h1>José Rodrigo Moreno López</h1>
-      <p class="tagline"><span class="mov" aria-live="polite"></span></p>
-      <div class="contact-line">
-        <span data-i18n="heroMexico">Mexico</span>
-        <span><a href="mailto:rodri.mo@ciencias.unam.mx">rodri.mo@ciencias.unam.mx</a></span>
-        <span><a href="https://github.com/NoSoyRo">GitHub</a></span>
-        <span><a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233">LinkedIn</a></span>
+    <!-- ═══ HERO ═══ -->
+    <section class="pi-hero" aria-label="Hero">
+      <p class="pi-hero-eyebrow">Pi Solutions · Mexico City</p>
+      <h1>We build what <em>matters.</em></h1>
+      <p class="pi-hero-sub">
+        Domain-driven software and data-intensive systems for businesses that demand precision, scale, and intelligence.
+      </p>
+      <div class="pi-hero-ctas">
+        <a href="#work" class="btn-primary">See our work</a>
+        <a href="#contact" class="btn-ghost">Get in touch</a>
       </div>
-    </header>
+    </section>
 
-    <main id="main">
-      <section id="profile" aria-labelledby="profile-heading">
-        <h2 id="profile-heading" data-i18n="profileHeading">Profile</h2>
-        <p class="lead" data-i18n="profileLead">
-          Senior data engineer and Databricks developer with 7+ years designing, building, and maintaining scalable data pipelines on Azure, GCP, Informatica, TIBCO EBX, and SnapLogic. Strong background in Apache Spark, Databricks, SQL, Python, FastAPI, Spring, and React, modernizing batch ETL and analytical workflows into cloud-native architectures. Proven work in data quality, governance, software architecture, ETL orchestration, and collaboration with analytics and backend teams.
-        </p>
-      </section>
-
-      <section id="experience" aria-labelledby="experience-heading">
-        <h2 id="experience-heading" data-i18n="experienceHeading">Experience</h2>
-
-        <article>
-          <h3 data-i18n="expSfTitle">Senior Software Engineer</h3>
-          <p class="meta" data-i18n="expSfMeta">Salesforce · Mexico (remote) · Mar 2026 — present</p>
-        </article>
-
-        <article>
-          <h3 data-i18n="expTmAdvTitle">Advanced Data Engineer &amp; Senior Quality Engineer</h3>
-          <p class="meta" data-i18n="expTmAdvMeta">Tech Mahindra · Mexico / remote · Sep 2025 — Mar 2026</p>
-          <ul class="tight">
-            <li data-i18n="expTmAdv0">Designed and implemented a configuration-first automation framework for functional testing of ML-driven recommendation flows.</li>
-            <li data-i18n="expTmAdv1">Integrated Spring-based applications with ReportPortal (metrics/traceability) and QMetry (quality engineering tracking).</li>
-            <li data-i18n="expTmAdv2">Led data quality, validation, and governance strategies for enterprise data platforms.</li>
-            <li data-i18n="expTmAdv3">Built performance-testing automation (sudden spike, stochastic TPS noise, endurance, high-TPS scenarios) and improved QMA for existing solutions at scale.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 data-i18n="expTmQeTitle">Senior Quality Engineer</h3>
-          <p class="meta" data-i18n="expTmQeMeta">Tech Mahindra · remote · Jul 2025 — Nov 2025</p>
-        </article>
-
-        <article>
-          <h3 data-i18n="expLectTitle">Faculty Lecturer (part-time)</h3>
-          <p class="meta" data-i18n="expLectMeta">Faculty of Engineering, UNAM · Ciudad Universitaria · Aug 2025 — present</p>
-          <ul class="tight">
-            <li data-i18n="expLect0">Data structures and algorithms 2 — industry-oriented course (Spanish).</li>
-            <li data-i18n="expLect1">Modern data mining patterns for computing engineers (English).</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 data-i18n="expChubbSrTitle">Senior MDM Data Engineer</h3>
-          <p class="meta" data-i18n="expChubbSrMeta">Chubb · Mexico / remote · Jun 2024 — Jun 2025</p>
-          <ul class="tight">
-            <li data-i18n="expChubbSr0">Enterprise pipelines with IDMC, IICS, PowerCenter, and Databricks for batch and near-real-time processing.</li>
-            <li data-i18n="expChubbSr1">Java Spring REST APIs (layered, domain-driven) integrating internal apps with on-prem MDM; reduced data consumption bottlenecks by roughly 30%.</li>
-            <li data-i18n="expChubbSr2">MDM architecture for customer domains: CTE-heavy SQL, procedures, modeling; support for analytics and insurance/risk reporting.</li>
-            <li data-i18n="expChubbSr3">Production support and UAT; FastAPI integration with Power BI for ETL job traceability; OpenAPI/Swagger for API schemas.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 data-i18n="expChubbTitle">MDM Data Engineer</h3>
-          <p class="meta" data-i18n="expChubbMeta">Chubb · Mexico / remote · Aug 2023 — Jun 2024</p>
-          <ul class="tight">
-            <li data-i18n="expChubb0">Databricks pipelines ingesting SAS, relational DBs, and APIs; Python ETL and SQL optimization.</li>
-            <li data-i18n="expChubb1">Workflow integration with Azure (monitoring, CI/CD, storage); Power BI on harmonized datasets.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 data-i18n="expAllTitle">MDM Designer &amp; Software Designer (consultant)</h3>
-          <p class="meta" data-i18n="expAllMeta">AllDatum · Mexico · Feb 2023 — Jun 2025</p>
-          <ul class="tight">
-            <li data-i18n="expAll0">Enterprise integration architectures across SAS, Databricks, TIBCO EBX, and SnapLogic.</li>
-            <li data-i18n="expAll1">Distributed J2EE workload distribution with governance-as-code, CI/CD, and modular subsystems matured through agile delivery.</li>
-            <li data-i18n="expAll2">Automated batch, reconciliation, and DQ validation for very large datasets (e.g. ~250M rows) to meet SLOs.</li>
-            <li data-i18n="expAll3">Extended MDM via Java APIs and REST; FastAPI backends with NoSQL integrating third parties (e.g. Google Maps, OpenAI SDK).</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 data-i18n="expSolTitle">Software Development Engineer</h3>
-          <p class="meta" data-i18n="expSolMeta">Solera · Mexico · Nov 2022 — Jan 2023</p>
-          <ul class="tight">
-            <li data-i18n="expSol0">Test automation and backend development with Spring Boot and .NET Core; DDD and data-driven design for two enterprise applications.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 data-i18n="expAtlasTitle">MDM &amp; Statistics (Actuarial)</h3>
-          <p class="meta" data-i18n="expAtlasMeta">Seguros Atlas · Mexico · Aug 2022 — Nov 2022</p>
-          <ul class="tight">
-            <li data-i18n="expAtlas0">Analytical pipelines and BI over SAS actuarial data; automated SQL and SnapLogic ETL.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 data-i18n="expAniTitle">Technical Lead &amp; Founder</h3>
-          <p class="meta" data-i18n="expAniMeta">Animathica · Mexico · May 2019 — Aug 2022</p>
-          <ul class="tight">
-            <li data-i18n="expAni0">Data-driven educational platforms (Python, FastAPI, Manim, Java); CI/CD with GitHub Actions.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section id="education" aria-labelledby="education-heading">
-        <h2 id="education-heading" data-i18n="eduHeading">Education</h2>
-        <article>
-          <h3 data-i18n="eduMscTitle">MSc in Computer Science (PCIC)</h3>
-          <p class="meta" data-i18n="eduMscMeta">IIMAS, UNAM · Mexico City · Aug 2024 — present</p>
-          <p class="lead" style="margin-top:0.5rem;" data-i18n="eduMscLead">Focus on solution architectures and tradeoffs, modern software design, and integration with AI operations.</p>
-        </article>
-        <article>
-          <h3 data-i18n="eduPhyTitle">BSc in Physics</h3>
-          <p class="meta" data-i18n="eduPhyMeta">Faculty of Sciences, UNAM · Mexico</p>
-          <p class="lead" style="margin-top:0.5rem;" data-i18n="eduPhyLead">Scientific programming, simulation, and data analysis.</p>
-        </article>
-        <article>
-          <h3 data-i18n="eduMathTitle">BSc in Mathematics</h3>
-          <p class="meta" data-i18n="eduMathMeta">Faculty of Sciences, UNAM · Mexico</p>
-        </article>
-      </section>
-
-      <section id="highlights" aria-labelledby="highlights-heading">
-        <h2 id="highlights-heading" data-i18n="highlightsHeading">Selected projects</h2>
-        <p class="lead" data-i18n="highlightsLead">Professional and research work complementing the public repositories listed below.</p>
-        <div class="featured">
-          <div class="card">
-            <h3 data-i18n="hlCattleTitle">Cattle accounting system</h3>
-            <p class="meta" data-i18n="hlCattleMeta">Python, Databricks, SQL · 2023 — present</p>
-            <p data-i18n="hlCattleBody">ETL and ML on transactional and historical data to estimate cattle counts from drone video; Spark aggregations for reporting.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="hlPosTitle">Connecting (POS platform)</h3>
-            <p class="meta" data-i18n="hlPosMeta">Spring, Node.js, React, SQL/NoSQL · 2023 — present</p>
-            <p data-i18n="hlPosBody">Centralized POS for small businesses using cloud services; monolith plus real-time messaging (WebSockets), token-based auth.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="hlUrbanTitle">Urban expansion modeling</h3>
-            <p class="meta" data-i18n="hlUrbanMeta">Python · Aug 2022 — Dec 2022</p>
-            <p data-i18n-html="hlUrbanHtml">AC–GA pipeline with unsupervised training to forecast urban land use (~80% accuracy) for planning. Related repository: <a href="https://github.com/NoSoyRo/CityModelling">CityModelling</a> (thesis work).</p>
-          </div>
+    <!-- ═══ STATS ═══ -->
+    <div class="pi-stats pi-reveal">
+      <div class="pi-stats-inner">
+        <div>
+          <div class="stat-num">10+</div>
+          <div class="stat-lbl">Years of science&nbsp;&amp;&nbsp;software</div>
         </div>
-      </section>
-
-      <section id="github" aria-labelledby="github-heading">
-        <h2 id="github-heading" data-i18n="ghHeading">Public GitHub repositories</h2>
-        <p class="lead" id="gh-lead">All public repositories under <a href="https://github.com/NoSoyRo">NoSoyRo</a> (name, primary language, notes).</p>
-        <div class="table-wrap">
-          <table class="repos">
-            <thead>
-              <tr>
-                <th data-i18n="ghThRepo">Repository</th>
-                <th data-i18n="ghThLang">Language</th>
-                <th data-i18n="ghThNotes">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><a href="https://github.com/NoSoyRo/.NET-Projects"><code>.NET-Projects</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote0">.NET coursework and exercises.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/ARTIFICIAL-INTELLIGENCE-PROJECTS"><code>ARTIFICIAL-INTELLIGENCE-PROJECTS</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote1">Portfolio work as a data analyst.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/ArtificialIntelligence"><code>ArtificialIntelligence</code></a></td><td>Python</td><td></td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/Basic-Problems"><code>Basic-Problems</code></a></td><td>Java</td><td data-i18n="ghNote3">Practice across languages and paradigms.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/CalcManim"><code>CalcManim</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>—</td><td data-i18n="ghNote4">Multivariable calculus animations (Manim).</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/CityModelling"><code>CityModelling</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote5">Master&apos;s thesis project.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/CloudAuthentication"><code>CloudAuthentication</code></a></td><td>Java</td><td data-i18n="ghNote6">JPA and Spring Security sample (web app).</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/DataSetCreation"><code>DataSetCreation</code></a></td><td>Java</td><td data-i18n="ghNote7">Random dataset generation for MDM scenarios.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/DataStructures"><code>DataStructures</code></a></td><td>Java</td><td data-i18n="ghNote8">Data structures in Java.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/DataStructuresC-"><code>DataStructuresC-</code></a></td><td>C#</td><td data-i18n="ghNote9">Data structures course (C#).</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/Django"><code>Django</code></a></td><td>Python</td><td></td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/django-crud-example"><code>django-crud-example</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>—</td><td data-i18n="ghNote12">Django CRUD (function-based views).</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/Django-Projects"><code>Django-Projects</code></a></td><td>Python</td><td></td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/eCommmerce"><code>eCommmerce</code></a></td><td>Java</td><td></td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/etl-mdm"><code>etl-mdm</code></a></td><td>Java</td><td data-i18n="ghNote14">MDM inner stages with Spring Batch.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/fractalcruncher_v1n"><code>fractalcruncher_v1n</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>—</td><td data-i18n="ghNote15">Iterated functions and visualization.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/Lab_contemporanea_2"><code>Lab_contemporanea_2</code></a></td><td>Jupyter Notebook</td><td></td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/LeetCode"><code>LeetCode</code></a></td><td>Python</td><td data-i18n="ghNote17">Practice solutions.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/mdm-framework"><code>mdm-framework</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote18">MDM-related experiments and notebooks.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/NoSoyRo-pre-pro"><code>NoSoyRo-pre-pro</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>Jupyter Notebook</td><td></td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/NoSoyRo-seg_aplic_2026-1"><code>NoSoyRo-seg_aplic_2026-1</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>—</td><td data-i18n="ghNote21">Course: application security fundamentals.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/nosoyro.github.io"><code>nosoyro.github.io</code></a></td><td>JavaScript</td><td data-i18n="ghNote22">This site.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/Physics"><code>Physics</code></a></td><td>—</td><td data-i18n="ghNote23">Simulation workflows.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/PI-SOLUTIONS"><code>PI-SOLUTIONS</code></a></td><td>JavaScript</td><td data-i18n="ghNote24">Pi Solutions projects.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/ProgramacionAvanzada"><code>ProgramacionAvanzada</code></a></td><td>Java</td><td data-i18n="ghNote25">MSc advanced programming coursework.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/proyecto-pa"><code>proyecto-pa</code></a></td><td>Java</td><td></td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/Proyectos_Personales"><code>Proyectos_Personales</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote27">Homework scripts and personal experiments.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/Security"><code>Security</code></a></td><td>C#</td><td data-i18n="ghNote28">ASP.NET Identity exploration.</td></tr>
-              <tr><td><a href="https://github.com/NoSoyRo/TheGame"><code>TheGame</code></a></td><td>—</td><td data-i18n="ghNote29">Dissemination, coursework, and side projects.</td></tr>
-            </tbody>
-          </table>
+        <div>
+          <div class="stat-num">60%</div>
+          <div class="stat-lbl">Better outcomes with AI agents</div>
         </div>
-        <p class="lead" style="margin-top:1rem;" data-i18n-html="ghFootHtml">Earlier visual demos (calculus sums, Fourier, collisions, n-body, and more) live under <a href="https://github.com/NoSoyRo/TheGame">TheGame</a> and <a href="https://github.com/NoSoyRo/Proyectos_Personales">Proyectos_Personales</a>.</p>
-      </section>
-
-      <section id="skills" aria-labelledby="skills-heading">
-        <h2 id="skills-heading" data-i18n="skillsHeading">Skills &amp; certifications</h2>
-        <dl class="skills-grid">
-          <div>
-            <dt data-i18n="skProg">Programming</dt>
-            <dd data-i18n="skProgDd">Python (5+ years), Java (Spring Boot/Cloud), SQL (SQL Server), .NET Core</dd>
-          </div>
-          <div>
-            <dt data-i18n="skData">Data engineering</dt>
-            <dd data-i18n="skDataDd">Databricks, Apache Spark, ETL, data quality, governance, IICS, PowerCenter, MDM, SnapLogic, TIBCO EBX, Spring Batch, SAS-style modernization</dd>
-          </div>
-          <div>
-            <dt data-i18n="skSoft">Software engineering</dt>
-            <dd data-i18n="skSoftDd">Spring ecosystem, FastAPI, Django, React, Node.js, JBoss, Tomcat, NGINX, CI/CD, DDD, microservices, design patterns</dd>
-          </div>
-          <div>
-            <dt data-i18n="skCloud">Cloud &amp; DevOps</dt>
-            <dd data-i18n="skCloudDd">Azure, GCP, Git / GitHub / GitLab</dd>
-          </div>
-          <div>
-            <dt data-i18n="skAnalytics">Analytics</dt>
-            <dd data-i18n="skAnalyticsDd">Power BI, OLAP, feature engineering</dd>
-          </div>
-          <div>
-            <dt data-i18n="skLang">Languages</dt>
-            <dd data-i18n="skLangDd">Spanish (native), English (full professional)</dd>
-          </div>
-        </dl>
-        <h3 id="certs-subheading" style="margin-top:1.5rem;font-size:0.85rem;font-family:var(--sans);letter-spacing:0.12em;text-transform:uppercase;" data-i18n="certsSub">Certifications</h3>
-        <ul class="certs">
-          <li data-i18n="cert0">Informatica MDM Developer — Aug 2023</li>
-          <li data-i18n="cert1">SnapLogic Professional Developer — Jun 2022</li>
-          <li data-i18n="cert2">SnapLogic Administrator / Architect — Oct 2022</li>
-          <li data-i18n="cert3">Microsoft Azure Fundamentals — Dec 2023</li>
-        </ul>
-      </section>
-
-      <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" data-i18n="contactHeading">Contact</h2>
-        <div class="contact-block">
-          <p><a href="mailto:rodri.mo@ciencias.unam.mx">rodri.mo@ciencias.unam.mx</a></p>
-          <p><a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233">LinkedIn</a> · <a href="https://github.com/NoSoyRo">GitHub</a></p>
+        <div>
+          <div class="stat-num">2</div>
+          <div class="stat-lbl">Major cloud platforms mastered</div>
         </div>
-        <form class="cv-form" action="" method="get">
-          <p class="meta" style="margin-top:1rem;" data-i18n-html="formHint">Form is static on GitHub Pages; wire <code>action</code> to your endpoint if needed.</p>
-          <label for="fname" data-i18n="formFirst">First name</label>
-          <input type="text" id="fname" name="firstname" autocomplete="given-name" data-i18n-placeholder="phFirst" placeholder="Your name">
-          <label for="lname" data-i18n="formLast">Last name</label>
-          <input type="text" id="lname" name="lastname" autocomplete="family-name" data-i18n-placeholder="phLast" placeholder="Your last name">
-          <label for="subject" data-i18n="formMessage">Message</label>
-          <textarea id="subject" name="subject" rows="6" data-i18n-placeholder="phMessage" placeholder="Write something"></textarea>
-          <input type="submit" data-i18n-value="formSubmit" value="Submit">
-        </form>
-      </section>
-    </main>
+        <div>
+          <div class="stat-num">#1</div>
+          <div class="stat-lbl">AI knowledge agent pioneers in Mexico</div>
+        </div>
+      </div>
+    </div>
 
-    <footer class="site-foot">
-      <p data-i18n-html="foot">Last updated March 2026. Source: <a href="https://github.com/NoSoyRo/nosoyro.github.io">nosoyro.github.io</a></p>
+    <!-- ═══ MANIFESTO ═══ -->
+    <section id="about" class="pi-manifesto pi-reveal" aria-labelledby="manifesto-heading">
+      <h2 id="manifesto-heading" class="sr-only">About</h2>
+      <blockquote>
+        We are engineers and scientists who believe software should do more than function —
+        it should <em>think</em>, adapt, and grow with your business.
+      </blockquote>
+      <p class="pi-manifesto-sub">
+        We specialise in domain-driven and data-intensive solutions: systems where the business logic
+        is as important as the infrastructure beneath it. From AI agents that centralise institutional
+        knowledge to platforms that predict entire cities, we turn complex problems into software
+        that works in the real world.
+      </p>
+    </section>
+
+    <!-- ═══ WORK ═══ -->
+    <section id="work" class="pi-work" aria-labelledby="work-heading">
+      <p class="pi-section-eyebrow">Selected work</p>
+      <h2 id="work-heading" class="pi-section-title">Eight problems. Eight solutions.</h2>
+
+      <div class="proj-grid">
+
+        <!-- 1 · CONNECTING -->
+        <article class="proj-card pi-reveal">
+          <div class="proj-illus" aria-hidden="true">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <circle cx="40" cy="30" r="7" fill="rgba(196,162,78,0.12)" stroke="#c4a24e" stroke-width="1.3"/>
+              <circle cx="14" cy="12" r="4"  stroke="#c4a24e" stroke-width="1" stroke-opacity=".65"/>
+              <circle cx="66" cy="12" r="4"  stroke="#c4a24e" stroke-width="1" stroke-opacity=".65"/>
+              <circle cx="66" cy="48" r="4"  stroke="#c4a24e" stroke-width="1" stroke-opacity=".65"/>
+              <circle cx="14" cy="48" r="4"  stroke="#c4a24e" stroke-width="1" stroke-opacity=".65"/>
+              <circle cx="40" cy="4"  r="3.5" stroke="#3d8c8a" stroke-width="1" stroke-opacity=".8"/>
+              <line x1="40" y1="23" x2="17" y2="15" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".45"/>
+              <line x1="40" y1="23" x2="63" y2="15" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".45"/>
+              <line x1="40" y1="37" x2="63" y2="45" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".45"/>
+              <line x1="40" y1="37" x2="17" y2="45" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".45"/>
+              <line x1="40" y1="23" x2="40" y2="7.5" stroke="#3d8c8a" stroke-width=".7" stroke-opacity=".6"/>
+            </svg>
+          </div>
+          <p class="proj-category">Commerce &amp; Operations</p>
+          <h3 class="proj-title">Connecting</h3>
+          <p class="proj-body">
+            The operating system for modern commerce. A unified platform that gives any business
+            real-time communication, cloud services, and a living network of partners — all from
+            a single baseline built to scale.
+          </p>
+          <p class="proj-foot">Baseline platform · 2023 — present</p>
+        </article>
+
+        <!-- 2 · RISK ASSESSMENT -->
+        <article class="proj-card proj-card--teal pi-reveal">
+          <div class="proj-illus" aria-hidden="true">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M40 4 L63 15 L63 37 Q40 59 40 59 Q17 59 17 37 L17 15 Z"
+                    stroke="#3d8c8a" stroke-width="1.2" stroke-linejoin="round" fill="rgba(61,140,138,0.06)"/>
+              <path d="M28 30 L36 38 L54 21" stroke="#3d8c8a" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9"  cy="7"  r="4" stroke="#3d8c8a" stroke-width=".9" stroke-opacity=".4"/>
+              <circle cx="71" cy="7"  r="4" stroke="#3d8c8a" stroke-width=".9" stroke-opacity=".4"/>
+              <circle cx="40" cy="59" r="0"/>
+              <line x1="17" y1="15" x2="12" y2="10" stroke="#3d8c8a" stroke-width=".7" stroke-opacity=".3"/>
+              <line x1="63" y1="15" x2="68" y2="10" stroke="#3d8c8a" stroke-width=".7" stroke-opacity=".3"/>
+              <text x="9"  y="9.5"  text-anchor="middle" font-size="3.2" fill="#3d8c8a" opacity=".6" font-family="monospace">NRT</text>
+              <text x="71" y="9.5"  text-anchor="middle" font-size="3.2" fill="#3d8c8a" opacity=".6" font-family="monospace">EA</text>
+              <text x="40" y="56"   text-anchor="middle" font-size="3.2" fill="#3d8c8a" opacity=".5" font-family="monospace">CV·ASTI</text>
+            </svg>
+          </div>
+          <p class="proj-category">Security &amp; Risk</p>
+          <h3 class="proj-title">Risk Intelligence Platform</h3>
+          <p class="proj-body">
+            Know your risk before it knows you. An enterprise-grade platform that quantifies,
+            tracks, and mitigates technological risk in real time — turning compliance from
+            a burden into a competitive advantage.
+          </p>
+          <p class="proj-foot">Enterprise application · 2025 — present</p>
+        </article>
+
+        <!-- 3 · RED NEGOCIOS -->
+        <article class="proj-card pi-reveal">
+          <div class="proj-illus" aria-hidden="true">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <circle cx="14" cy="10" r="2.8" fill="#c4a24e" opacity=".5"/>
+              <circle cx="40" cy="10" r="2.8" fill="#c4a24e" opacity=".55"/>
+              <circle cx="66" cy="10" r="2.8" fill="#c4a24e" opacity=".5"/>
+              <circle cx="14" cy="30" r="2.8" fill="#c4a24e" opacity=".6"/>
+              <circle cx="40" cy="30" r="4"   fill="#c4a24e" opacity=".9"/>
+              <circle cx="66" cy="30" r="2.8" fill="#c4a24e" opacity=".6"/>
+              <circle cx="14" cy="50" r="2.2" fill="#c4a24e" opacity=".35"/>
+              <circle cx="40" cy="50" r="2.8" fill="#c4a24e" opacity=".55"/>
+              <circle cx="66" cy="50" r="2.2" fill="#c4a24e" opacity=".35"/>
+              <line x1="14" y1="10" x2="40" y2="10" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".25"/>
+              <line x1="40" y1="10" x2="66" y2="10" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".25"/>
+              <line x1="14" y1="30" x2="40" y2="30" stroke="#c4a24e" stroke-width="1.2" stroke-opacity=".6"/>
+              <line x1="40" y1="30" x2="66" y2="30" stroke="#c4a24e" stroke-width="1.2" stroke-opacity=".6"/>
+              <line x1="14" y1="10" x2="14" y2="30" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".25"/>
+              <line x1="40" y1="10" x2="40" y2="50" stroke="#c4a24e" stroke-width="1.1" stroke-opacity=".5"/>
+              <line x1="66" y1="10" x2="66" y2="30" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".25"/>
+              <line x1="14" y1="30" x2="40" y2="50" stroke="#3d8c8a" stroke-width=".8" stroke-opacity=".5"/>
+              <line x1="66" y1="30" x2="40" y2="50" stroke="#3d8c8a" stroke-width=".8" stroke-opacity=".4"/>
+            </svg>
+          </div>
+          <p class="proj-category">Ecommerce &amp; Network</p>
+          <h3 class="proj-title">Red Negocios</h3>
+          <p class="proj-body">
+            Commerce that connects. A modern ecommerce baseline that does more than sell —
+            it weaves businesses into a living network where every transaction creates
+            a new relationship and every node grows the whole.
+          </p>
+          <p class="proj-foot">Commerce baseline · 2024 — present</p>
+        </article>
+
+        <!-- 4 · CLOUD MIGRATION -->
+        <article class="proj-card proj-card--teal pi-reveal">
+          <div class="proj-illus" aria-hidden="true">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Cloud left (GCP) -->
+              <path d="M6 33 Q5 24 11 23 Q10 15 18 15 Q19 9 27 11 Q30 6 37 9 Q43 6 44 13 Q51 12 51 19 Q56 19 56 25 Q59 25 59 31 Q59 38 52 38 L9 38 Q3 38 6 33 Z"
+                    stroke="#c4a24e" stroke-width="1" fill="rgba(196,162,78,0.06)"/>
+              <!-- Arrow -->
+              <line x1="59" y1="28" x2="72" y2="28" stroke="#3d8c8a" stroke-width="1.3" stroke-opacity=".8"/>
+              <polyline points="68,24 73,28 68,32" stroke="#3d8c8a" stroke-width="1.3"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Azure node -->
+              <circle cx="75" cy="28" r="5" stroke="#3d8c8a" stroke-width="1" fill="rgba(61,140,138,0.08)"/>
+              <text x="30" y="52" text-anchor="middle" font-size="5.5" fill="#c4a24e" opacity=".55" font-family="monospace">GCP</text>
+              <text x="75" y="52" text-anchor="middle" font-size="5.5" fill="#3d8c8a" opacity=".65" font-family="monospace">AZ</text>
+            </svg>
+          </div>
+          <p class="proj-category">Cloud Engineering</p>
+          <h3 class="proj-title">Zero-Downtime Cloud Migration</h3>
+          <p class="proj-body">
+            From wherever you are to wherever you need to be. We have moved entire enterprise
+            ecosystems between GCP and Azure without downtime, without data loss,
+            and without drama.
+          </p>
+          <p class="proj-foot">Cloud infrastructure · ongoing</p>
+        </article>
+
+        <!-- 5 · AI AGENTS -->
+        <article class="proj-card pi-reveal">
+          <div class="proj-illus" aria-hidden="true">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Input layer -->
+              <circle cx="10" cy="14" r="3"   stroke="#c4a24e" stroke-width="1"   fill="rgba(196,162,78,0.1)"/>
+              <circle cx="10" cy="30" r="3.5" stroke="#c4a24e" stroke-width="1.1" fill="rgba(196,162,78,0.14)"/>
+              <circle cx="10" cy="46" r="3"   stroke="#c4a24e" stroke-width="1"   fill="rgba(196,162,78,0.1)"/>
+              <!-- Hidden -->
+              <circle cx="40" cy="10" r="3"   stroke="#c4a24e" stroke-width="1"   fill="rgba(196,162,78,0.1)"/>
+              <circle cx="40" cy="24" r="4"   stroke="#c4a24e" stroke-width="1.4" fill="rgba(196,162,78,0.18)"/>
+              <circle cx="40" cy="38" r="3.5" stroke="#c4a24e" stroke-width="1.1" fill="rgba(196,162,78,0.14)"/>
+              <circle cx="40" cy="52" r="3"   stroke="#c4a24e" stroke-width="1"   fill="rgba(196,162,78,0.1)"/>
+              <!-- Output -->
+              <circle cx="70" cy="21" r="4"   stroke="#3d8c8a" stroke-width="1.4" fill="rgba(61,140,138,0.15)"/>
+              <circle cx="70" cy="39" r="3"   stroke="#3d8c8a" stroke-width="1"   fill="rgba(61,140,138,0.1)"/>
+              <!-- Connections -->
+              <line x1="13" y1="14" x2="37" y2="24" stroke="#c4a24e" stroke-width=".6" stroke-opacity=".35"/>
+              <line x1="13" y1="30" x2="37" y2="24" stroke="#c4a24e" stroke-width=".7" stroke-opacity=".5"/>
+              <line x1="13" y1="30" x2="37" y2="38" stroke="#c4a24e" stroke-width=".6" stroke-opacity=".35"/>
+              <line x1="13" y1="46" x2="37" y2="38" stroke="#c4a24e" stroke-width=".6" stroke-opacity=".3"/>
+              <line x1="44" y1="24" x2="66" y2="21" stroke="#3d8c8a" stroke-width=".9" stroke-opacity=".6"/>
+              <line x1="44" y1="38" x2="66" y2="39" stroke="#3d8c8a" stroke-width=".8" stroke-opacity=".5"/>
+              <line x1="43" y1="10" x2="66" y2="21" stroke="#3d8c8a" stroke-width=".6" stroke-opacity=".28"/>
+              <line x1="43" y1="52" x2="66" y2="39" stroke="#3d8c8a" stroke-width=".6" stroke-opacity=".28"/>
+            </svg>
+          </div>
+          <p class="proj-category">Artificial Intelligence</p>
+          <h3 class="proj-title">AI Agents Built for Results</h3>
+          <p class="proj-body">
+            Intelligence that actually works. We design modern AI agent architectures optimised
+            for token efficiency and real-world reasoning — delivering up to 60% better outcomes
+            than off-the-shelf solutions.
+          </p>
+          <p class="proj-foot">AI architecture · 2024 — present</p>
+        </article>
+
+        <!-- 6 · ENTERPRISE AI -->
+        <article class="proj-card pi-reveal">
+          <div class="proj-illus" aria-hidden="true">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <circle cx="40" cy="30" r="9"  fill="rgba(196,162,78,0.13)" stroke="#c4a24e" stroke-width="1.5"/>
+              <!-- Rays -->
+              <line x1="40" y1="21" x2="40" y2="6"  stroke="#c4a24e" stroke-width=".8" stroke-opacity=".5"/>
+              <circle cx="40" cy="5" r="3"  stroke="#c4a24e" stroke-width="1" fill="rgba(196,162,78,0.1)"/>
+              <line x1="47" y1="23" x2="65" y2="9"  stroke="#c4a24e" stroke-width=".8" stroke-opacity=".45"/>
+              <circle cx="67" cy="8" r="2.5" stroke="#c4a24e" stroke-width=".9" fill="rgba(196,162,78,0.08)"/>
+              <line x1="49" y1="30" x2="70" y2="30" stroke="#c4a24e" stroke-width=".8" stroke-opacity=".5"/>
+              <circle cx="72" cy="30" r="3"  stroke="#3d8c8a" stroke-width="1"  fill="rgba(61,140,138,0.1)"/>
+              <line x1="46" y1="37" x2="61" y2="52" stroke="#c4a24e" stroke-width=".8" stroke-opacity=".4"/>
+              <circle cx="62" cy="54" r="2"  stroke="#c4a24e" stroke-width=".8" fill="rgba(196,162,78,0.07)"/>
+              <line x1="34" y1="38" x2="19" y2="52" stroke="#c4a24e" stroke-width=".8" stroke-opacity=".4"/>
+              <circle cx="18" cy="54" r="2"  stroke="#c4a24e" stroke-width=".8" fill="rgba(196,162,78,0.07)"/>
+              <line x1="31" y1="30" x2="11" y2="30" stroke="#c4a24e" stroke-width=".8" stroke-opacity=".5"/>
+              <circle cx="9"  cy="30" r="2.5" stroke="#c4a24e" stroke-width=".9" fill="rgba(196,162,78,0.08)"/>
+              <line x1="33" y1="23" x2="15" y2="9"  stroke="#c4a24e" stroke-width=".7" stroke-opacity=".35"/>
+              <circle cx="13" cy="8" r="2"   stroke="#c4a24e" stroke-width=".8" fill="rgba(196,162,78,0.06)"/>
+            </svg>
+          </div>
+          <p class="proj-category">Enterprise AI · Pioneers in Mexico</p>
+          <h3 class="proj-title">One AI. All Your Knowledge.</h3>
+          <p class="proj-body">
+            We are pioneers in Mexico building AI agents that centralise your company's
+            institutional knowledge, eliminate data silos, and make every team member
+            exponentially more capable — without replacing the people who matter.
+          </p>
+          <p class="proj-foot">Enterprise knowledge AI · 2025 — present</p>
+        </article>
+
+        <!-- 7 · PLASTICS 3D + CHATBOT -->
+        <article class="proj-card proj-card--teal pi-reveal">
+          <div class="proj-illus" aria-hidden="true">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Isometric cube -->
+              <polygon points="28,7 50,18 28,29 6,18"
+                       stroke="#3d8c8a" stroke-width="1.1" fill="rgba(61,140,138,0.07)" stroke-linejoin="round"/>
+              <polygon points="6,18 28,29 28,50 6,39"
+                       stroke="#3d8c8a" stroke-width="1.1" fill="rgba(61,140,138,0.04)" stroke-linejoin="round"/>
+              <polygon points="50,18 50,39 28,50 28,29"
+                       stroke="#c4a24e" stroke-width="1.1" fill="rgba(196,162,78,0.05)" stroke-linejoin="round"/>
+              <!-- Chat bubble -->
+              <rect x="53" y="7" width="23" height="15" rx="3"
+                    stroke="#3d8c8a" stroke-width="1" fill="rgba(61,140,138,0.09)"/>
+              <polyline points="56,22 54,27 62,22"
+                        stroke="#3d8c8a" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="57" y1="13" x2="72" y2="13" stroke="#3d8c8a" stroke-width=".9" stroke-opacity=".55"/>
+              <line x1="57" y1="17" x2="67" y2="17" stroke="#3d8c8a" stroke-width=".9" stroke-opacity=".35"/>
+            </svg>
+          </div>
+          <p class="proj-category">Manufacturing &amp; AI</p>
+          <h3 class="proj-title">Your Product, Digital Twin</h3>
+          <p class="proj-body">
+            For a plastics manufacturer, we built a system that models product profiles in 3D
+            with precision and pairs them with a conversational AI — so customers can explore,
+            configure, and buy without friction or a sales call.
+          </p>
+          <p class="proj-foot">Custom solution · 2024</p>
+        </article>
+
+        <!-- 8 · CITY GROWTH -->
+        <article class="proj-card pi-reveal">
+          <div class="proj-illus" aria-hidden="true">
+            <svg viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+              <!-- Cellular automaton grid 6×4 -->
+              <rect x="4"  y="4"  width="10" height="10" fill="rgba(196,162,78,0.12)" stroke="rgba(196,162,78,0.18)" stroke-width=".6"/>
+              <rect x="15" y="4"  width="10" height="10" fill="rgba(196,162,78,0.08)" stroke="rgba(196,162,78,0.18)" stroke-width=".6"/>
+              <rect x="26" y="4"  width="10" height="10" fill="rgba(196,162,78,0.22)" stroke="rgba(196,162,78,0.2)"  stroke-width=".6"/>
+              <rect x="37" y="4"  width="10" height="10" fill="rgba(196,162,78,0.14)" stroke="rgba(196,162,78,0.18)" stroke-width=".6"/>
+              <rect x="48" y="4"  width="10" height="10" fill="rgba(196,162,78,0.06)" stroke="rgba(196,162,78,0.14)" stroke-width=".6"/>
+              <rect x="59" y="4"  width="10" height="10" fill="rgba(196,162,78,0.04)" stroke="rgba(196,162,78,0.12)" stroke-width=".6"/>
+
+              <rect x="4"  y="15" width="10" height="10" fill="rgba(196,162,78,0.18)" stroke="rgba(196,162,78,0.2)"  stroke-width=".6"/>
+              <rect x="15" y="15" width="10" height="10" fill="rgba(196,162,78,0.42)" stroke="rgba(196,162,78,0.28)" stroke-width=".6"/>
+              <rect x="26" y="15" width="10" height="10" fill="rgba(196,162,78,0.68)" stroke="rgba(196,162,78,0.32)" stroke-width=".6"/>
+              <rect x="37" y="15" width="10" height="10" fill="rgba(196,162,78,0.38)" stroke="rgba(196,162,78,0.26)" stroke-width=".6"/>
+              <rect x="48" y="15" width="10" height="10" fill="rgba(196,162,78,0.16)" stroke="rgba(196,162,78,0.2)"  stroke-width=".6"/>
+              <rect x="59" y="15" width="10" height="10" fill="rgba(196,162,78,0.05)" stroke="rgba(196,162,78,0.12)" stroke-width=".6"/>
+
+              <rect x="4"  y="26" width="10" height="10" fill="rgba(196,162,78,0.15)" stroke="rgba(196,162,78,0.2)"  stroke-width=".6"/>
+              <rect x="15" y="26" width="10" height="10" fill="rgba(196,162,78,0.52)" stroke="rgba(196,162,78,0.3)"  stroke-width=".6"/>
+              <rect x="26" y="26" width="10" height="10" fill="rgba(196,162,78,0.85)" stroke="rgba(196,162,78,0.38)" stroke-width=".6"/>
+              <rect x="37" y="26" width="10" height="10" fill="rgba(196,162,78,0.55)" stroke="rgba(196,162,78,0.3)"  stroke-width=".6"/>
+              <rect x="48" y="26" width="10" height="10" fill="rgba(196,162,78,0.22)" stroke="rgba(196,162,78,0.22)" stroke-width=".6"/>
+              <rect x="59" y="26" width="10" height="10" fill="rgba(196,162,78,0.07)" stroke="rgba(196,162,78,0.14)" stroke-width=".6"/>
+
+              <rect x="4"  y="37" width="10" height="10" fill="rgba(196,162,78,0.08)" stroke="rgba(196,162,78,0.14)" stroke-width=".6"/>
+              <rect x="15" y="37" width="10" height="10" fill="rgba(196,162,78,0.28)" stroke="rgba(196,162,78,0.22)" stroke-width=".6"/>
+              <rect x="26" y="37" width="10" height="10" fill="rgba(196,162,78,0.44)" stroke="rgba(196,162,78,0.26)" stroke-width=".6"/>
+              <rect x="37" y="37" width="10" height="10" fill="rgba(196,162,78,0.28)" stroke="rgba(196,162,78,0.22)" stroke-width=".6"/>
+              <rect x="48" y="37" width="10" height="10" fill="rgba(196,162,78,0.1)"  stroke="rgba(196,162,78,0.16)" stroke-width=".6"/>
+              <rect x="59" y="37" width="10" height="10" fill="rgba(196,162,78,0.03)" stroke="rgba(196,162,78,0.1)"  stroke-width=".6"/>
+
+              <rect x="4"  y="48" width="10" height="10" fill="rgba(196,162,78,0.04)" stroke="rgba(196,162,78,0.1)"  stroke-width=".6"/>
+              <rect x="15" y="48" width="10" height="10" fill="rgba(196,162,78,0.14)" stroke="rgba(196,162,78,0.16)" stroke-width=".6"/>
+              <rect x="26" y="48" width="10" height="10" fill="rgba(196,162,78,0.2)"  stroke="rgba(196,162,78,0.18)" stroke-width=".6"/>
+              <rect x="37" y="48" width="10" height="10" fill="rgba(196,162,78,0.12)" stroke="rgba(196,162,78,0.16)" stroke-width=".6"/>
+              <rect x="48" y="48" width="10" height="10" fill="rgba(196,162,78,0.05)" stroke="rgba(196,162,78,0.1)"  stroke-width=".6"/>
+              <rect x="59" y="48" width="10" height="10" fill="rgba(196,162,78,0.02)" stroke="rgba(196,162,78,0.08)" stroke-width=".6"/>
+            </svg>
+          </div>
+          <p class="proj-category">Urban Intelligence &amp; Mathematics</p>
+          <h3 class="proj-title">Mathematics That Reads the Future</h3>
+          <p class="proj-body">
+            Our proprietary cellular automaton model predicts urban expansion with mathematical
+            precision — giving planners, investors, and governments a clear, data-driven view
+            of tomorrow's city today. Proven at ~80% accuracy.
+          </p>
+          <p class="proj-foot">Research · <a href="https://github.com/NoSoyRo/CityModelling" style="color:inherit;border-bottom:1px solid rgba(196,162,78,0.3)">CityModelling</a></p>
+        </article>
+
+      </div><!-- /proj-grid -->
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" class="pi-contact pi-reveal" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="pi-contact-heading">
+        Let's build something<br><em>extraordinary.</em>
+      </h2>
+      <p class="pi-contact-sub">
+        We work with ambitious teams across Mexico and beyond. If you have a hard problem,
+        we want to hear about it.
+      </p>
+      <div class="pi-contact-links">
+        <a href="mailto:rodri.mo@ciencias.unam.mx">rodri.mo@ciencias.unam.mx</a>
+        <a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233">LinkedIn</a>
+        <a href="https://github.com/NoSoyRo/PI-SOLUTIONS">GitHub · PI-SOLUTIONS</a>
+        <a href="cv.html">Full CV</a>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="pi-foot">
+      <span>Pi Solutions · Mexico · 2026</span>
+      <span>
+        <a href="cv.html">CV</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/NoSoyRo">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="https://nosoyro.github.io">nosoyro.github.io</a>
+      </span>
     </footer>
-  </div>
 
-  <script src="script_animation.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="reveal.js"></script>
-  <script src="i18n.js"></script>
+  </div><!-- /pi-wrap -->
+
+  <script>
+    /* Minimal sr-only helper (no separate CSS file) */
+    (function(){
+      var style = document.createElement('style');
+      style.textContent = '.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}';
+      document.head.appendChild(style);
+    })();
+  </script>
+  <script src="pi-canvas.js"></script>
+  <script src="pi-intro.js"></script>
+  <script>
+    /* Scroll reveal for .pi-reveal elements */
+    (function(){
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var els = document.querySelectorAll('.pi-reveal');
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(!e.isIntersecting) return;
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        });
+      }, { rootMargin:'0px 0px -5% 0px', threshold: 0.07 });
+      els.forEach(function(el){ io.observe(el); });
+    })();
+  </script>
 </body>
 </html>

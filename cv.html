@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>José Rodrigo Moreno López — CV</title>
+  <meta name="description" content="Senior data engineer, lecturer, and MSc student. Full CV and portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas1" aria-hidden="true"></canvas>
+  <div class="cv-wrap">
+    <a class="sr-only" href="#main" id="skip-link">Skip to content</a>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="site-nav-inner">
+        <div class="nav-links">
+          <a href="index.html" style="color:var(--accent);border:1px solid rgba(13,71,161,0.25);padding:0.28rem 0.6rem;border-radius:2px;letter-spacing:0.08em;">Pi Solutions</a>
+          <a href="#profile" data-i18n="navProfile">Profile</a>
+          <a href="#experience" data-i18n="navExperience">Experience</a>
+          <a href="#education" data-i18n="navEducation">Education</a>
+          <a href="#highlights" data-i18n="navHighlights">Highlights</a>
+          <a href="#github">GitHub</a>
+          <a href="#skills" data-i18n="navSkills">Skills</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn" data-set-lang="es" aria-pressed="false">ES</button>
+          </div>
+        </div>
+        <div>
+          <a href="https://github.com/NoSoyRo">github.com/NoSoyRo</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1>José Rodrigo Moreno López</h1>
+      <p class="tagline"><span class="mov" aria-live="polite"></span></p>
+      <div class="contact-line">
+        <span data-i18n="heroMexico">Mexico</span>
+        <span><a href="mailto:rodri.mo@ciencias.unam.mx">rodri.mo@ciencias.unam.mx</a></span>
+        <span><a href="https://github.com/NoSoyRo">GitHub</a></span>
+        <span><a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233">LinkedIn</a></span>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="profile" aria-labelledby="profile-heading">
+        <h2 id="profile-heading" data-i18n="profileHeading">Profile</h2>
+        <p class="lead" data-i18n="profileLead">
+          Senior data engineer and Databricks developer with 7+ years designing, building, and maintaining scalable data pipelines on Azure, GCP, Informatica, TIBCO EBX, and SnapLogic. Strong background in Apache Spark, Databricks, SQL, Python, FastAPI, Spring, and React, modernizing batch ETL and analytical workflows into cloud-native architectures. Proven work in data quality, governance, software architecture, ETL orchestration, and collaboration with analytics and backend teams.
+        </p>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading" data-i18n="experienceHeading">Experience</h2>
+
+        <article>
+          <h3 data-i18n="expSfTitle">Senior Software Engineer</h3>
+          <p class="meta" data-i18n="expSfMeta">Salesforce · Mexico (remote) · Mar 2026 — present</p>
+        </article>
+
+        <article>
+          <h3 data-i18n="expTmAdvTitle">Advanced Data Engineer &amp; Senior Quality Engineer</h3>
+          <p class="meta" data-i18n="expTmAdvMeta">Tech Mahindra · Mexico / remote · Sep 2025 — Mar 2026</p>
+          <ul class="tight">
+            <li data-i18n="expTmAdv0">Designed and implemented a configuration-first automation framework for functional testing of ML-driven recommendation flows.</li>
+            <li data-i18n="expTmAdv1">Integrated Spring-based applications with ReportPortal (metrics/traceability) and QMetry (quality engineering tracking).</li>
+            <li data-i18n="expTmAdv2">Led data quality, validation, and governance strategies for enterprise data platforms.</li>
+            <li data-i18n="expTmAdv3">Built performance-testing automation (sudden spike, stochastic TPS noise, endurance, high-TPS scenarios) and improved QMA for existing solutions at scale.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 data-i18n="expTmQeTitle">Senior Quality Engineer</h3>
+          <p class="meta" data-i18n="expTmQeMeta">Tech Mahindra · remote · Jul 2025 — Nov 2025</p>
+        </article>
+
+        <article>
+          <h3 data-i18n="expLectTitle">Faculty Lecturer (part-time)</h3>
+          <p class="meta" data-i18n="expLectMeta">Faculty of Engineering, UNAM · Ciudad Universitaria · Aug 2025 — present</p>
+          <ul class="tight">
+            <li data-i18n="expLect0">Data structures and algorithms 2 — industry-oriented course (Spanish).</li>
+            <li data-i18n="expLect1">Modern data mining patterns for computing engineers (English).</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 data-i18n="expChubbSrTitle">Senior MDM Data Engineer</h3>
+          <p class="meta" data-i18n="expChubbSrMeta">Chubb · Mexico / remote · Jun 2024 — Jun 2025</p>
+          <ul class="tight">
+            <li data-i18n="expChubbSr0">Enterprise pipelines with IDMC, IICS, PowerCenter, and Databricks for batch and near-real-time processing.</li>
+            <li data-i18n="expChubbSr1">Java Spring REST APIs (layered, domain-driven) integrating internal apps with on-prem MDM; reduced data consumption bottlenecks by roughly 30%.</li>
+            <li data-i18n="expChubbSr2">MDM architecture for customer domains: CTE-heavy SQL, procedures, modeling; support for analytics and insurance/risk reporting.</li>
+            <li data-i18n="expChubbSr3">Production support and UAT; FastAPI integration with Power BI for ETL job traceability; OpenAPI/Swagger for API schemas.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 data-i18n="expChubbTitle">MDM Data Engineer</h3>
+          <p class="meta" data-i18n="expChubbMeta">Chubb · Mexico / remote · Aug 2023 — Jun 2024</p>
+          <ul class="tight">
+            <li data-i18n="expChubb0">Databricks pipelines ingesting SAS, relational DBs, and APIs; Python ETL and SQL optimization.</li>
+            <li data-i18n="expChubb1">Workflow integration with Azure (monitoring, CI/CD, storage); Power BI on harmonized datasets.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 data-i18n="expAllTitle">MDM Designer &amp; Software Designer (consultant)</h3>
+          <p class="meta" data-i18n="expAllMeta">AllDatum · Mexico · Feb 2023 — Jun 2025</p>
+          <ul class="tight">
+            <li data-i18n="expAll0">Enterprise integration architectures across SAS, Databricks, TIBCO EBX, and SnapLogic.</li>
+            <li data-i18n="expAll1">Distributed J2EE workload distribution with governance-as-code, CI/CD, and modular subsystems matured through agile delivery.</li>
+            <li data-i18n="expAll2">Automated batch, reconciliation, and DQ validation for very large datasets (e.g. ~250M rows) to meet SLOs.</li>
+            <li data-i18n="expAll3">Extended MDM via Java APIs and REST; FastAPI backends with NoSQL integrating third parties (e.g. Google Maps, OpenAI SDK).</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 data-i18n="expSolTitle">Software Development Engineer</h3>
+          <p class="meta" data-i18n="expSolMeta">Solera · Mexico · Nov 2022 — Jan 2023</p>
+          <ul class="tight">
+            <li data-i18n="expSol0">Test automation and backend development with Spring Boot and .NET Core; DDD and data-driven design for two enterprise applications.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 data-i18n="expAtlasTitle">MDM &amp; Statistics (Actuarial)</h3>
+          <p class="meta" data-i18n="expAtlasMeta">Seguros Atlas · Mexico · Aug 2022 — Nov 2022</p>
+          <ul class="tight">
+            <li data-i18n="expAtlas0">Analytical pipelines and BI over SAS actuarial data; automated SQL and SnapLogic ETL.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 data-i18n="expAniTitle">Technical Lead &amp; Founder</h3>
+          <p class="meta" data-i18n="expAniMeta">Animathica · Mexico · May 2019 — Aug 2022</p>
+          <ul class="tight">
+            <li data-i18n="expAni0">Data-driven educational platforms (Python, FastAPI, Manim, Java); CI/CD with GitHub Actions.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading" data-i18n="eduHeading">Education</h2>
+        <article>
+          <h3 data-i18n="eduMscTitle">MSc in Computer Science (PCIC)</h3>
+          <p class="meta" data-i18n="eduMscMeta">IIMAS, UNAM · Mexico City · Aug 2024 — present</p>
+          <p class="lead" style="margin-top:0.5rem;" data-i18n="eduMscLead">Focus on solution architectures and tradeoffs, modern software design, and integration with AI operations.</p>
+        </article>
+        <article>
+          <h3 data-i18n="eduPhyTitle">BSc in Physics</h3>
+          <p class="meta" data-i18n="eduPhyMeta">Faculty of Sciences, UNAM · Mexico</p>
+          <p class="lead" style="margin-top:0.5rem;" data-i18n="eduPhyLead">Scientific programming, simulation, and data analysis.</p>
+        </article>
+        <article>
+          <h3 data-i18n="eduMathTitle">BSc in Mathematics</h3>
+          <p class="meta" data-i18n="eduMathMeta">Faculty of Sciences, UNAM · Mexico</p>
+        </article>
+      </section>
+
+      <section id="highlights" aria-labelledby="highlights-heading">
+        <h2 id="highlights-heading" data-i18n="highlightsHeading">Selected projects</h2>
+        <p class="lead" data-i18n="highlightsLead">Professional and research work complementing the public repositories listed below.</p>
+        <div class="featured">
+          <div class="card">
+            <h3 data-i18n="hlCattleTitle">Cattle accounting system</h3>
+            <p class="meta" data-i18n="hlCattleMeta">Python, Databricks, SQL · 2023 — present</p>
+            <p data-i18n="hlCattleBody">ETL and ML on transactional and historical data to estimate cattle counts from drone video; Spark aggregations for reporting.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="hlPosTitle">Connecting (POS platform)</h3>
+            <p class="meta" data-i18n="hlPosMeta">Spring, Node.js, React, SQL/NoSQL · 2023 — present</p>
+            <p data-i18n="hlPosBody">Centralized POS for small businesses using cloud services; monolith plus real-time messaging (WebSockets), token-based auth.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="hlUrbanTitle">Urban expansion modeling</h3>
+            <p class="meta" data-i18n="hlUrbanMeta">Python · Aug 2022 — Dec 2022</p>
+            <p data-i18n-html="hlUrbanHtml">AC–GA pipeline with unsupervised training to forecast urban land use (~80% accuracy) for planning. Related repository: <a href="https://github.com/NoSoyRo/CityModelling">CityModelling</a> (thesis work).</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="github" aria-labelledby="github-heading">
+        <h2 id="github-heading" data-i18n="ghHeading">Public GitHub repositories</h2>
+        <p class="lead" id="gh-lead">All public repositories under <a href="https://github.com/NoSoyRo">NoSoyRo</a> (name, primary language, notes).</p>
+        <div class="table-wrap">
+          <table class="repos">
+            <thead>
+              <tr>
+                <th data-i18n="ghThRepo">Repository</th>
+                <th data-i18n="ghThLang">Language</th>
+                <th data-i18n="ghThNotes">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="https://github.com/NoSoyRo/.NET-Projects"><code>.NET-Projects</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote0">.NET coursework and exercises.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/ARTIFICIAL-INTELLIGENCE-PROJECTS"><code>ARTIFICIAL-INTELLIGENCE-PROJECTS</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote1">Portfolio work as a data analyst.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/ArtificialIntelligence"><code>ArtificialIntelligence</code></a></td><td>Python</td><td></td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/Basic-Problems"><code>Basic-Problems</code></a></td><td>Java</td><td data-i18n="ghNote3">Practice across languages and paradigms.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/CalcManim"><code>CalcManim</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>—</td><td data-i18n="ghNote4">Multivariable calculus animations (Manim).</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/CityModelling"><code>CityModelling</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote5">Master&apos;s thesis project.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/CloudAuthentication"><code>CloudAuthentication</code></a></td><td>Java</td><td data-i18n="ghNote6">JPA and Spring Security sample (web app).</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/DataSetCreation"><code>DataSetCreation</code></a></td><td>Java</td><td data-i18n="ghNote7">Random dataset generation for MDM scenarios.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/DataStructures"><code>DataStructures</code></a></td><td>Java</td><td data-i18n="ghNote8">Data structures in Java.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/DataStructuresC-"><code>DataStructuresC-</code></a></td><td>C#</td><td data-i18n="ghNote9">Data structures course (C#).</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/Django"><code>Django</code></a></td><td>Python</td><td></td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/django-crud-example"><code>django-crud-example</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>—</td><td data-i18n="ghNote12">Django CRUD (function-based views).</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/Django-Projects"><code>Django-Projects</code></a></td><td>Python</td><td></td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/eCommmerce"><code>eCommmerce</code></a></td><td>Java</td><td></td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/etl-mdm"><code>etl-mdm</code></a></td><td>Java</td><td data-i18n="ghNote14">MDM inner stages with Spring Batch.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/fractalcruncher_v1n"><code>fractalcruncher_v1n</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>—</td><td data-i18n="ghNote15">Iterated functions and visualization.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/Lab_contemporanea_2"><code>Lab_contemporanea_2</code></a></td><td>Jupyter Notebook</td><td></td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/LeetCode"><code>LeetCode</code></a></td><td>Python</td><td data-i18n="ghNote17">Practice solutions.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/mdm-framework"><code>mdm-framework</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote18">MDM-related experiments and notebooks.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/NoSoyRo-pre-pro"><code>NoSoyRo-pre-pro</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>Jupyter Notebook</td><td></td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/NoSoyRo-seg_aplic_2026-1"><code>NoSoyRo-seg_aplic_2026-1</code></a> <span class="badge" data-i18n-badge>fork</span></td><td>—</td><td data-i18n="ghNote21">Course: application security fundamentals.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/nosoyro.github.io"><code>nosoyro.github.io</code></a></td><td>JavaScript</td><td data-i18n="ghNote22">This site.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/Physics"><code>Physics</code></a></td><td>—</td><td data-i18n="ghNote23">Simulation workflows.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/PI-SOLUTIONS"><code>PI-SOLUTIONS</code></a></td><td>JavaScript</td><td data-i18n="ghNote24">Pi Solutions projects.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/ProgramacionAvanzada"><code>ProgramacionAvanzada</code></a></td><td>Java</td><td data-i18n="ghNote25">MSc advanced programming coursework.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/proyecto-pa"><code>proyecto-pa</code></a></td><td>Java</td><td></td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/Proyectos_Personales"><code>Proyectos_Personales</code></a></td><td>Jupyter Notebook</td><td data-i18n="ghNote27">Homework scripts and personal experiments.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/Security"><code>Security</code></a></td><td>C#</td><td data-i18n="ghNote28">ASP.NET Identity exploration.</td></tr>
+              <tr><td><a href="https://github.com/NoSoyRo/TheGame"><code>TheGame</code></a></td><td>—</td><td data-i18n="ghNote29">Dissemination, coursework, and side projects.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="lead" style="margin-top:1rem;" data-i18n-html="ghFootHtml">Earlier visual demos (calculus sums, Fourier, collisions, n-body, and more) live under <a href="https://github.com/NoSoyRo/TheGame">TheGame</a> and <a href="https://github.com/NoSoyRo/Proyectos_Personales">Proyectos_Personales</a>.</p>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" data-i18n="skillsHeading">Skills &amp; certifications</h2>
+        <dl class="skills-grid">
+          <div>
+            <dt data-i18n="skProg">Programming</dt>
+            <dd data-i18n="skProgDd">Python (5+ years), Java (Spring Boot/Cloud), SQL (SQL Server), .NET Core</dd>
+          </div>
+          <div>
+            <dt data-i18n="skData">Data engineering</dt>
+            <dd data-i18n="skDataDd">Databricks, Apache Spark, ETL, data quality, governance, IICS, PowerCenter, MDM, SnapLogic, TIBCO EBX, Spring Batch, SAS-style modernization</dd>
+          </div>
+          <div>
+            <dt data-i18n="skSoft">Software engineering</dt>
+            <dd data-i18n="skSoftDd">Spring ecosystem, FastAPI, Django, React, Node.js, JBoss, Tomcat, NGINX, CI/CD, DDD, microservices, design patterns</dd>
+          </div>
+          <div>
+            <dt data-i18n="skCloud">Cloud &amp; DevOps</dt>
+            <dd data-i18n="skCloudDd">Azure, GCP, Git / GitHub / GitLab</dd>
+          </div>
+          <div>
+            <dt data-i18n="skAnalytics">Analytics</dt>
+            <dd data-i18n="skAnalyticsDd">Power BI, OLAP, feature engineering</dd>
+          </div>
+          <div>
+            <dt data-i18n="skLang">Languages</dt>
+            <dd data-i18n="skLangDd">Spanish (native), English (full professional)</dd>
+          </div>
+        </dl>
+        <h3 id="certs-subheading" style="margin-top:1.5rem;font-size:0.85rem;font-family:var(--sans);letter-spacing:0.12em;text-transform:uppercase;" data-i18n="certsSub">Certifications</h3>
+        <ul class="certs">
+          <li data-i18n="cert0">Informatica MDM Developer — Aug 2023</li>
+          <li data-i18n="cert1">SnapLogic Professional Developer — Jun 2022</li>
+          <li data-i18n="cert2">SnapLogic Administrator / Architect — Oct 2022</li>
+          <li data-i18n="cert3">Microsoft Azure Fundamentals — Dec 2023</li>
+        </ul>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" data-i18n="contactHeading">Contact</h2>
+        <div class="contact-block">
+          <p><a href="mailto:rodri.mo@ciencias.unam.mx">rodri.mo@ciencias.unam.mx</a></p>
+          <p><a href="https://www.linkedin.com/in/jose-rodrigo-moreno-lopez-165b07233">LinkedIn</a> · <a href="https://github.com/NoSoyRo">GitHub</a></p>
+        </div>
+        <form class="cv-form" action="" method="get">
+          <p class="meta" style="margin-top:1rem;" data-i18n-html="formHint">Form is static on GitHub Pages; wire <code>action</code> to your endpoint if needed.</p>
+          <label for="fname" data-i18n="formFirst">First name</label>
+          <input type="text" id="fname" name="firstname" autocomplete="given-name" data-i18n-placeholder="phFirst" placeholder="Your name">
+          <label for="lname" data-i18n="formLast">Last name</label>
+          <input type="text" id="lname" name="lastname" autocomplete="family-name" data-i18n-placeholder="phLast" placeholder="Your last name">
+          <label for="subject" data-i18n="formMessage">Message</label>
+          <textarea id="subject" name="subject" rows="6" data-i18n-placeholder="phMessage" placeholder="Write something"></textarea>
+          <input type="submit" data-i18n-value="formSubmit" value="Submit">
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <p data-i18n-html="foot">Last updated March 2026. Source: <a href="https://github.com/NoSoyRo/nosoyro.github.io">nosoyro.github.io</a></p>
+    </footer>
+  </div>
+
+  <script src="script_animation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="reveal.js"></script>
+  <script src="i18n.js"></script>
+</body>
+</html>
