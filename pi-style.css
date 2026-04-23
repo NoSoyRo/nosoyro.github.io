@@ -620,14 +620,24 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   flex-shrink: 0;
 }
 
+.team-avatar-photo {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 0 6px rgba(196,162,78,0.07), 0 10px 36px rgba(0,0,0,0.45);
+}
+
 .team-avatar-photo img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--gold);
-  box-shadow: 0 0 0 6px rgba(196,162,78,0.07), 0 10px 36px rgba(0,0,0,0.45);
+  object-position: center top;
   display: block;
+}
+
+/* Zoom into Maureen's face — portrait photo, face is upper-centre */
+.team-avatar-photo--mau img {
+  object-position: center 8%;
 }
 
 .team-avatar-svg svg {
@@ -635,13 +645,6 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   height: 100%;
   border-radius: 50%;
   display: block;
-}
-
-/* Zoom in on Maureen's face — photo is full-body, face is upper-centre */
-.team-avatar-photo--mau img {
-  object-position: center 12%;
-  transform: scale(1.55);
-  transform-origin: center 20%;
 }
 
 .team-role-badge {
